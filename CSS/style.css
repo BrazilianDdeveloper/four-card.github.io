@@ -1,0 +1,196 @@
+/* Mobile first*/
+
+body {
+    font-family: 'Poppins', sans-serif, Arial;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.main-container {
+    width: 86vw;
+    margin: 1vw auto 0 auto;
+}
+
+.main-header {
+    text-align: center;
+}
+
+.main-title {
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.keep-strong {
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 1.5vh;
+}
+
+.sub-title {
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 8vh;
+    color: rgb(143, 143, 143);
+}
+
+/*cores das bordas superiores dos cards*/
+
+.card-item {
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
+    height: 250px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 6vh;
+}
+
+.card-item:nth-child(1) {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card-item:nth-child(2) {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card-item:nth-child(3) {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card-item:nth-child(4) {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.card-title {
+    font-size: 1.75em;
+}
+
+.card-paragraph {
+    font-size: 1em;
+    margin-bottom: 40px;
+    color: rgb(163, 162, 162);
+}
+
+.card-title, .card-paragraph {
+    width: 84%;
+    padding-left: 7%;
+}
+
+.card-image {
+    float: right;
+    text-align: right;
+    margin: 0 6vw;
+}
+
+/*Para lidar com fontes pequenas em ipad eu criei esse media-query*/ 
+
+@media (min-width: 768px) {
+
+    .main-title {
+        font-weight: lighter;
+        font-size: 4.5em;
+    }
+
+    .sub-title {
+        font-weight: 400;
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 8vh;
+        color: rgb(143, 143, 143);
+    }
+    
+    .card-title {
+        font-size: 3em;
+    }
+    
+    .card-paragraph {
+        width: 80%;
+        font-size: 1.40em;
+        margin-bottom: -0.5%;
+        color: rgb(163, 162, 162);
+    } 
+
+    /*Eu tive problemas em relação ao distanciamento entre a imagem do segundo card e o parágrafo, então tive que fazer um margin-bootm
+    especifico para o card 2*/
+
+    .card-paragraph:nth-child(2) {
+        width: 80%;
+        font-size: 1.40em;
+        margin-bottom: -3%;
+        color: rgb(163, 162, 162);
+    } 
+
+    .card-image {
+        float: right;
+        text-align: right;
+        margin: 0 4vw;
+    }
+}
+
+/*desktop version*/
+
+@media (min-width: 1100px) {
+    
+    .main-title {
+        font-size: 2em;
+    }
+
+    .sub-title {
+        display: inline-block;
+        max-width: 45%;
+        font-size: 1em;
+    }
+
+    .cards-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 40vh;
+    }
+
+    .card-item {
+        width: 28vw;
+        margin: 0 1vw;
+    }
+
+    .card-item:first-child {
+        border-top: 4px solid hsl(180, 62%, 55%);
+        margin-top: 100px;
+    }
+    
+    .card-item:nth-child(2) {
+        border-top: 4px solid hsl(0, 78%, 62%);
+    }
+    
+    .card-item:nth-child(3) {
+        border-top: 4px solid hsl(34, 97%, 64%);
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin-top: -18vh;
+    }
+    
+    .card-item:nth-child(4) {
+        border-top: 4px solid hsl(212, 86%, 64%);
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+
+    .card-item:nth-child(4), .card-item:first-child {
+        margin-top: 25vh;
+    }
+
+    .card-item .card-title {
+        font-size: 2em;
+    }
+
+    .card-item .card-paragraph {
+        width: 80%;
+        font-size: 1em;
+        margin-bottom: 10%;
+        color: rgb(163, 162, 162);
+    } 
+
+    .card-item .card-image {
+        margin: 0 2vw;
+    }
+
+
+}
